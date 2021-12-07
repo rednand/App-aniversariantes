@@ -1,0 +1,10 @@
+body{
+    background: url("../assets/img/backgroundIndex-ballon.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    color: #000000;
+}

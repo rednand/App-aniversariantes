@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0.9% 0;
+    background-color: #C0DBDE;
+}
+
+.header-logo {
+    margin-left: 2%;
+    width: 48%;
+}
