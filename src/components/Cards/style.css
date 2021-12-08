@@ -1,0 +1,44 @@
+.second-section {
+    width: 80%;
+    margin: 0% 10%;
+}
+
+.card {
+    width: 15%;
+    height: 20rem;
+    float: left;
+    background-color: #ffffff;
+    margin: 2% 1%;
+    position: relative;
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+    box-shadow: 15px 25px 50px black;
+}
+
+
+.description-photo {
+    font-family: 'Apercu Mono Pro Regular';
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 10% 0;
+    text-align: start;
+    position: absolute;
+    top: 82%;
+    left: 5%;
+}
+
+
+.img {
+    position: absolute;
+    width: 90%;
+    height: 15rem;
+    top: 5%;
+    left: 5%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}

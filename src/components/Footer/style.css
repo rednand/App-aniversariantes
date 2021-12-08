@@ -7,6 +7,9 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    top: 99%;
 }
 
 .footer-left {

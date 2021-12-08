@@ -8,9 +8,26 @@
 }
 
 .data {
+    width: 100%;
+    margin:2% 0%;
+    font-size: 3rem;
+}
+
+.select-data{
     width: 50%;
     margin: 5%;
-    font-size: 5rem;
+}
+.select-birthday {
+    font-size: 1.6rem;
+    border: 8px solid #ffffff;
+    background-color: #C0DBDE;
+    font-family: Helvetica;
+    width: 80%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    height: 5rem;
 }
 
 .div-mensagem {
