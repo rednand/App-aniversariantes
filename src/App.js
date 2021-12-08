@@ -5,12 +5,17 @@ import "./assets/index.css";
 import "./assets/App.css";
 import FelizAniversario from "./components/FelizAniversario/Felizaniversario";
 import Cards from "./components/Cards/Cards";
+import api from "./components/services/api";
 
 class App extends Component {
+  state = { filmes: [] };
 
+  async componentDidMount() {
+    const response = await api.get("star%20wars");
+    console.log(response.data);
+    this.setState({ filmes: response.data });
+  }
   render() {
-   
-
     return (
       <section>
         <Header />

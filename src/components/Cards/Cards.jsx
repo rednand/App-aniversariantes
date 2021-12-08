@@ -13,10 +13,12 @@ this.setState({ filmes: response.data });
  }
 
   render() {
+    console.log(this.state);
     return (
       <div>
+         
         <h1>Listar filmes</h1>
-        {this.state.filmes.map((filme) => (
+        {this.state.filmes.forEach((filme) => (
           <div className="second-section">
             <div className="card">
               <li key={filme.show.id}>
