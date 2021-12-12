@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./style.css";
+import { Typography } from "@material-ui/core";
+
 
 class Nav extends Component {
   render() {
     return (
       <>
-        <nav className="header-nav">
+        <Typography  className="header-nav">
           <ul>
             <li>
               <a className="nav-a" href="busca.html">
@@ -31,7 +33,7 @@ class Nav extends Component {
               </div>
             </li>
           </ul>
-        </nav>
+        </Typography>
       </>
     );
   }
