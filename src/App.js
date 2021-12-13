@@ -7,7 +7,6 @@ import FelizAniversario from "./components/FelizAniversario/Felizaniversario";
 import Cards from "./components/Cards/Cards";
 import api from "./components/services/api";
 
-
 function App() {
   const [filmes, setVideos] = useState([]);
 
@@ -25,7 +24,12 @@ function App() {
       <Header />
       <FelizAniversario />
       {filmes.map((filme) => (
-        <Cards key={filme.id} id={filme.id} desc={filme.show.name} foto={filme.show.image.medium}/>
+        <Cards
+          key={filme.id}
+          id={filme.id}
+          desc={filme.show.name}
+          foto={filme.show.image.medium}
+        />
       ))}
       <Footer />
     </section>
