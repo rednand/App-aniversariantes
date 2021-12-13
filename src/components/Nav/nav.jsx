@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import { Typography } from "@material-ui/core";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "../pages/Home";
 import BuscarCadastro from "../pages/BuscarCadastro";
 import Contato from "../pages/Contato";
 function Nav() {
@@ -35,9 +34,8 @@ function Nav() {
           </li>
         </ul>
         <Routes>
-          <Route exact element={<Home />} path="/"></Route>
 
-          <Route element={<Contato />} path="/empresa"></Route>
+          <Route element={<Contato />} path="/contato"></Route>
 
           <Route element={<BuscarCadastro />} path="/buscar"></Route>
         </Routes>
