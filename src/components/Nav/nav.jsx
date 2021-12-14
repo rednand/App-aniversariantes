@@ -7,7 +7,7 @@ import BuscarCadastro from "../pages/BuscarCadastro";
 import Contato from "../pages/Contato";
 function Nav() {
   return (
-    <Router>
+    <div>
       <Typography className="header-nav">
         <ul>
           <li>
@@ -34,15 +34,9 @@ function Nav() {
             </div>
           </li>
         </ul>
-        <Routes>
-          <Route exact element={<Home />} path="/"></Route>
-
-          <Route element={<Contato />} path="/empresa"></Route>
-
-          <Route element={<BuscarCadastro />} path="/buscar"></Route>
-        </Routes>
+    
       </Typography>
-    </Router>
+    </div>
   );
 }
 
