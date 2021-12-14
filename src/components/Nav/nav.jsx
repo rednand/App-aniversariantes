@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import { Typography } from "@material-ui/core";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "../pages/Home";
-import BuscarCadastro from "../pages/BuscarCadastro";
-import Contato from "../pages/Contato";
+
 function Nav() {
   return (
     <div>
@@ -34,8 +32,7 @@ function Nav() {
             </div>
           </li>
         </ul>
-    
-      </Typography>
+          </Typography>
     </div>
   );
 }
