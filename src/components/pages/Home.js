@@ -19,7 +19,6 @@ function Home() {
 
   return (
     <section>
-      <Header />
       <FelizAniversario />
       {filmes.map((filme) => (
         <Cards
@@ -29,7 +28,7 @@ function Home() {
           foto={filme.show.image.medium}
         />
       ))}
-      <Footer />
+    
     </section>
   );
 }

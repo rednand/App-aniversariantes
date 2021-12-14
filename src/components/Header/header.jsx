@@ -7,8 +7,7 @@ import "./style.css"
 class Header extends Component {
   render() {
     return (
-
-        <header id="topo" className="header">
+        <header id="topo" >
           <div className="header-logo">
             <a href="https://grupomultiplica.com.br/">
               <img src={Logo} alt=""/>

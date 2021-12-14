@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 import { Typography } from "@material-ui/core";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div>
-      <Typography className="header-nav">
+    <div className="header">
+      <Typography  className="header-nav">
         <ul>
           <li>
             <Link className="nav-a" to="/buscar">
@@ -14,12 +14,12 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link className="nav-a" to="/contato">
+            <Link className="nav-a" to="/editar">
               Editar cadastro
             </Link>
           </li>
           <li>
-            <Link to="/contato">
+            <Link className="" to="/editar">
               <button> Cadastre-se</button>
             </Link>
           </li>
@@ -32,7 +32,7 @@ function Nav() {
             </div>
           </li>
         </ul>
-          </Typography>
+      </Typography>
     </div>
   );
 }
