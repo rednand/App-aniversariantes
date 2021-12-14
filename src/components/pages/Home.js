@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
 import FelizAniversario from "../FelizAniversario/Felizaniversario";
 import Cards from "../Cards/Cards";
 import api from "../services/api";
