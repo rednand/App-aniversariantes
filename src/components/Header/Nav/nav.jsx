@@ -105,7 +105,7 @@ function Nav() {
             </Link>
           </HeaderNavLi>
           <HeaderNavLi>
-            <Link className="" to="/editar">
+            <Link className="" to="/cadastro">
               <Botao> Cadastre-se</Botao>
             </Link>
           </HeaderNavLi>

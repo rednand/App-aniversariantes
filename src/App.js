@@ -8,6 +8,7 @@ import Editar from "./components/pages/Editar";
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
 import Pagina404 from "./components/pages/Pagina404";
+import Cadastro from './components/pages/Cadastro'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact element={<Home />} path="/"></Route>
         <Route element={<Editar />} path="/editar"></Route>
         <Route element={<BuscarCadastro />} path="/buscar"></Route>
+        <Route element={<Cadastro />} path="/cadastro"></Route>
         <Route element={<Pagina404 />}></Route>
       </Routes>
       <Footer />
