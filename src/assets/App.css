@@ -5,11 +5,14 @@ body {
 }
 
 body {
+
     background: url("../assets/img/backgroundIndex-ballon.jpg") no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+flex-direction: column;
+color: #000000;
     flex-direction: column;
     color: #000000;
 }
