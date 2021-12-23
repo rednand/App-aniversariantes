@@ -1,5 +1,7 @@
 import React from "react";
+import api from "../services/api";
 import styled from "styled-components";
+import { Button, TextField } from "@material-ui/core";
 
 const Main = styled.div`
   height: 110vh;
@@ -12,12 +14,33 @@ const Main = styled.div`
   background: linear-gradient(-10deg, #ffffff 50%, #c0dbde 50%);
   color: #ffffff;
   font-size: 2rem;
+
+  .input-class {
+    width: 50%;
+    margin: 1% auto;
+  }
 `;
 const CadastroSection = styled.section`
   padding: 10%;
 `;
 
 const Cadastro = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    api
+      .post("posts", {
+        body: e.target.nome.value,
+        title: e.target.cpf.value,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <Main>
       <CadastroSection>
@@ -25,9 +48,11 @@ const Cadastro = () => {
           <h1>CADASTRO</h1>
         </section>
         <section class="form-section">
-          <form id="form" method="post" action="./busca.html">
+          <form onSubmit={handleSubmit} id="form" method="post">
             <div>
-              <input
+              <TextField
+                className="input-class"
+                fullWidth
                 name="nome"
                 id="nome"
                 type="text"
@@ -41,8 +66,10 @@ const Cadastro = () => {
               <span class="input-mensagem-erro"></span>
             </div>
             <div>
-              <input
+              <TextField
+                fullWidth
                 name="cpf"
+                className="input-class"
                 type="number"
                 id="cpf"
                 data-tipo="cpf"
@@ -53,23 +80,11 @@ const Cadastro = () => {
               <span class="input-mensagem-erro"></span>
             </div>
             <div>
-              <input
-                placeholder="Insira sua data de nascimento"
-                data-tipo="date"
-                type="text"
-                id="datebirth"
-                name="date"
-                onfocus="typeTextToDate()"
-                onblur="typeDateToText()"
-                required
-                data-data
-              />
-              <span class="input-mensagem-erro"></span>
-            </div>
-            <div>
-              <input
+              <TextField
                 type="email"
                 id="email"
+                className="input-class"
+                fullWidth
                 data-tipo="email"
                 placeholder=" Insira seu e-mail:"
                 name="email"
@@ -77,43 +92,19 @@ const Cadastro = () => {
               />
               <span class="input-mensagem-erro"></span>
             </div>
-            <input
+            <TextField
               type="file"
               accept="image/*"
               id="image"
+              fullWidth
+              className="input-class"
               placeholder=" Selecione uma foto do seu dispositivo"
               name="image"
               data-foto
             />
-            <div id="div-termo">
-              {" "}
-              <input type="checkbox" id="termo" name="termo" required />
-              <label for="termo">
-                Declaro que aceito enviar meus{" "}
-                <strong href="">dados pessoais</strong>.
-              </label>
-            </div>
-            <div id="captcha">
-              <div class="math">
-                <span id="valor1"></span>
-                <span> + </span>
-                <span id="valor2"></span>
-                <span> =</span>
-                <input
-                  id="totalvalores"
-                  type="text"
-                  name="totalvalores"
-                  required="required"
-                  placeholder="digite a soma"
-                />
-              </div>
-              <button id="enviarcaptcha" type="submit">
-                Validar
-              </button>
-            </div>
-            <p id="aviso"></p>
-
-            <input type="submit" value="Enviar" name="Enviar" />
+            <Button type="submit" variant="contained">
+              Enviar
+            </Button>
           </form>
         </section>
       </CadastroSection>

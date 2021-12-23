@@ -3,13 +3,11 @@ import FelizAniversario from "../FelizAniversario/Felizaniversario";
 import Cards from "../Cards/Cards";
 import api from "../services/api";
 
-
-
 function Home() {
   const [filmes, setVideos] = useState([]);
 
   useEffect(() => {
-    api.get("star%20wars").then(({ data }) => {
+    api.get("users").then(({ data }) => {
       setVideos(data);
     });
     console.log(filmes);
@@ -23,12 +21,11 @@ function Home() {
       {filmes.map((filme) => (
         <Cards
           key={filme.id}
-          id={filme.id}
-          desc={filme.show.name}
-          foto={filme.show.image.medium}
+          //id={filme.id}
+          desc={filme.name}
+          //foto={filme.show.image.medium}
         />
       ))}
-    
     </section>
   );
 }

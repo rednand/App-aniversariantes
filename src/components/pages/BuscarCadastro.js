@@ -6,7 +6,7 @@ import Cards from "../Cards/Cards";
 const Main = styled.div`
   width: 100%;
   height: 50rem;
-  
+
   min-height: 50rem;
 
   @media (min-width: 769px) and (max-width: 1204px) {
@@ -151,15 +151,19 @@ function BuscarCadastro() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    api.get("star").then(({ data }) => {
+    api.get("posts").then(({ data }) => {
       setMovies(data);
     });
     console.log(movies);
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const [loading, setLoading] = useState(false);
+
+  const MostraDiv = () => setLoading(true);
+
   return (
-    <Main className={isBackgroundRed ? "" : ""}>
+    <Main className={isBackgroundRed ? "red" : "white"}>
       <Search class="search">
         <div>
           <label for="search">
@@ -179,14 +183,16 @@ function BuscarCadastro() {
             />
             <Button>Buscar</Button>
           </div>
-          <Loading id="loading">Carregando pessoas cadastradas...</Loading>
+          <Loading >
+            {loading ? "Carregando pessoas cadastradas" : null}
+          </Loading>
           <div id="section-busca">
             {movies.map((movie) => (
-              <Cards
+              <Cards onLoad={MostraDiv}
                 key={movie.id}
-                id={movie.id}
-                desc={movie.show.name}
-                foto={movie.show.image.medium}
+                //   id={movie.id}
+                desc={movie.name}
+                //   foto={movie.show.image.medium}
               />
             ))}
           </div>
