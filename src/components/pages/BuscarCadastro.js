@@ -145,6 +145,11 @@ const Loading = styled.div`
   }
 `;
 
+const SectionBusca = styled.div`
+  color: #000000;
+  width: 100%;
+`;
+
 function BuscarCadastro() {
   const isBackgroundRed = true;
 
@@ -157,6 +162,7 @@ function BuscarCadastro() {
     console.log(movies);
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(movies);
 
   const [loading, setLoading] = useState(false);
 
@@ -183,19 +189,18 @@ function BuscarCadastro() {
             />
             <Button>Buscar</Button>
           </div>
-          <Loading >
-            {loading ? "Carregando pessoas cadastradas" : null}
-          </Loading>
-          <div id="section-busca">
+          <Loading>{loading ? "Carregando pessoas cadastradas" : null}</Loading>
+          <SectionBusca>
             {movies.map((movie) => (
-              <Cards onLoad={MostraDiv}
+              <Cards
+                onLoad={MostraDiv}
                 key={movie.id}
-                //   id={movie.id}
-                desc={movie.name}
-                //   foto={movie.show.image.medium}
+                id={movie.id}
+                desc={movie.title}
+                pBody={movie.body}
               />
             ))}
-          </div>
+          </SectionBusca>
         </div>
       </Search>
     </Main>

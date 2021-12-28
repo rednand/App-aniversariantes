@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SegundaSection = styled.div`
   width: 80%;
@@ -29,7 +29,7 @@ const DescricaoPhoto = styled.p`
   margin: 0 0 10% 0;
   text-align: start;
   position: absolute;
-  top: 92%;
+  top: 88%;
   left: 5%;
 `;
 
@@ -43,7 +43,18 @@ const Img = styled.img`
   object-position: 50% 10%;
 `;
 
-function Cards({ desc, foto }) {
+const BodyCard = styled.p`
+  position: absolute;
+  width: 90%;
+  height: 20rem;
+  top: 10%;
+  margin: 5%;
+  object-fit: cover;
+  object-position: 50% 10%;
+  font-size: 1rem;
+`;
+
+function Cards({ desc, foto, pBody }) {
   return (
     <SegundaSection>
       <Card
@@ -55,6 +66,7 @@ function Cards({ desc, foto }) {
       >
         <DescricaoPhoto>{desc}</DescricaoPhoto>
         <Img src={foto} alt=" " />
+        <BodyCard>{pBody}</BodyCard>
       </Card>
     </SegundaSection>
   );

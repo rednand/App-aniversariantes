@@ -95,6 +95,11 @@ function Nav() {
       <Typography>
         <ul>
           <HeaderNavLi>
+            <Link className="nav-a" exact to="/">
+              Home
+            </Link>
+          </HeaderNavLi>
+          <HeaderNavLi>
             <Link className="nav-a" to="/buscar">
               Buscar cadastro
             </Link>
