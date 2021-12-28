@@ -1,7 +1,7 @@
 import { TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import styled from "styled-components";
-import ImagemDefault from  '../../assets/img/disposicao-da-vista-superior-com-um-cartao-emoji-sorridente_23-2148860301.jpg'
+import ImagemDefault from "../../assets/img/disposicao-da-vista-superior-com-um-cartao-emoji-sorridente_23-2148860301.jpg";
 
 const Main = styled.main`
   height: 110vh;
@@ -17,7 +17,7 @@ const Main = styled.main`
 const TituloH1 = styled.h1`
   padding: 7% 5%;
   text-align: start;
-  font-size: 2rem
+  font-size: 2rem;
 `;
 
 const BuscaCPF = styled.section`
@@ -49,28 +49,30 @@ const MostraInfos = styled.section`
 const Card = styled.div`
   margin: 0% 5%;
   width: 40%;
-  height: 25rem;
+  height: 20rem;
   box-shadow: 0px 0px 0px black;
   transition: none;
   border: 20px solid #c0dbde;
   position: relative;
+  box-shadow: inset 0 0 0 20px #ffffff;
 
   &:hover {
     transform: none;
     transition: none;
-    box-shadow: 0px 0px 0px black;
   }
 `;
 
 const Imagem = styled.div`
   position: absolute;
-  left: 3%;
+  left: 20px;
+  top: 20px;
   height: 18rem;
-  width: 45%;
+  width: 80%;
   object-fit: cover;
-  object-position: 50% 30%;
   background-image: url(${ImagemDefault});
-
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
 `;
 
 const Descricao = styled.div`
@@ -150,7 +152,7 @@ function Editar() {
             <DescricaoP> </DescricaoP>
             <DescricaoP></DescricaoP>
           </Descricao>
-          <Imagem src={ImagemDefault}  alt="erro" />
+          <Imagem src={ImagemDefault} alt="erro" />
         </Card>
       </MostraInfos>
       <Exclusao>Excluir cadastro</Exclusao>
